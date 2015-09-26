@@ -28,11 +28,11 @@ function onSuccess(contacts) {
             html += '<h2>' + contacts[i].displayName ? contacts[i].displayName : contacts[i].nickName + '</h2>';
             if (contacts[i].phoneNumbers) {
                 html += '<ul class="innerlsv" data-role="listview" data-inset="true">';
-                html += '<li><h3>Phone Numbers</h3></li>';
+                html += '<li><h3>Numeros</h3></li>';
                 for (var j = 0; j < contacts[i].phoneNumbers.length; j++) {
-                    html += "<li>Type: " + contacts[i].phoneNumbers[j].type + "<br/>" +
-                        "Value: " + contacts[i].phoneNumbers[j].value + "<br/>" +
-                        "Preferred: " + contacts[i].phoneNumbers[j].pref + "</li>";
+                    html += "<li>Tipo: " + contacts[i].phoneNumbers[j].type + "<br/>" +
+                        "Numero: " + contacts[i].phoneNumbers[j].value + "<br/>" +
+                        "Favorito: " + contacts[i].phoneNumbers[j].pref + "</li>";
                 }
                 html += "</ul>";
             }
@@ -41,8 +41,8 @@ function onSuccess(contacts) {
     }
     if (contacts.length === 0) {
         html = '<li data-role="collapsible" data-iconpos="right" data-shadow="false" data-corners="false">';
-        html += '<h2>No Contacts</h2>';
-        html += '<label>No Contacts Listed</label>';
+        html += '<h2>Nenhum Contatos</h2>';
+        html += '<label>Nenhum contato listado</label>';
         html += '</li>';
     }
     $("#contactsList").html(html);
@@ -53,7 +53,7 @@ function onSuccess(contacts) {
 }
 
 function onError(contactError) {
-    alert('Oops Something went wrong!');
+    alert('Oops Algo deu errado!');
     $.mobile.loading("hide");
     $("body").removeClass('ui-disabled');
 }
@@ -64,12 +64,12 @@ function bindAddContactEvents() {
             number = $.trim($("#number").val());
 
         if (name.length == 0) {
-            alert("Please enter a valid Name");
+            alert("Por favor entre com um Nome valido");
             return false;
         }
 
         if (number.length == 0) {
-            alert("Please enter a valid Number");
+            alert("Por favor entre com um Numero valido");
             return false;
         }
 
@@ -86,12 +86,12 @@ function bindAddContactEvents() {
 }
 
 function createSuccess() {
-    alert("Contact has been successfully added");
+    alert("Contato adicionado com sucesso");
     resetPage();
 }
 
 function createError() {
-    alert("Oops Something went wrong! Please try again later.");
+    alert("Oops Alfo deu errado! Por favor tente mais tarde.");
 }
 
 function resetPage() {
