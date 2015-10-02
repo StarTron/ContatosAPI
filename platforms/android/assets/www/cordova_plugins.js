@@ -67,13 +67,21 @@ module.exports = [
         "merges": [
             ""
         ]
+    },
+    {
+        "file": "plugins/cordova-plugin-x-socialsharing/www/SocialSharing.js",
+        "id": "cordova-plugin-x-socialsharing.SocialSharing",
+        "clobbers": [
+            "window.plugins.socialsharing"
+        ]
     }
 ];
 module.exports.metadata = 
 // TOP OF METADATA
 {
     "cordova-plugin-whitelist": "1.1.0",
-    "org.apache.cordova.contacts": "0.2.16"
+    "org.apache.cordova.contacts": "0.2.16",
+    "cordova-plugin-x-socialsharing": "5.0.4"
 }
 // BOTTOM OF METADATA
 });
