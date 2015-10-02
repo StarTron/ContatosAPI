@@ -7,7 +7,10 @@ function onDeviceReady() {
 $(document).on("pageshow", function () {
     $.mobile.loading("hide");
     $("body").removeClass('ui-disabled');
-    if ($("#contactsList").length == 1) {
+    // Adicionado ante delay
+	FastClick.attach(document.body);
+	//
+	if ($("#contactsList").length == 1) {
         $("body").addClass('ui-disabled').css("background", "#000");
         $.mobile.loading("show");
         var options = new ContactFindOptions();
