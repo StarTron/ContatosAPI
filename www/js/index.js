@@ -91,7 +91,7 @@ function createSuccess() {
 }
 
 function createError() {
-    alert("Oops Alfo deu errado! Por favor tente mais tarde.");
+    alert("Oops Algo deu errado! Por favor tente mais tarde.");
 }
 
 function resetPage() {
