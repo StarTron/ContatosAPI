@@ -1,0 +1,13 @@
+<div data-role="page">
+    <div data-role="header" data-position="fixed" data-theme="b" data-add-back-btn="true">
+        <h1>Contatos</h1>
+    </div>
+    <div class="wrapper">
+        <h1>Corpartilhar</h1>
+<button onclick="window.plugins.socialsharing.shareViaWhatsApp('Teste de mensagem', null /* img */, null /* url */, function() {console.log('share ok')}, function(errormsg){alert(errormsg)})">msg via WhatsApp (with errcallback)</button>
+<button onclick="window.plugins.socialsharing.shareViaWhatsApp('Mensagem', 'http://sabigps.com.br/images/logo.png' /* img */, 'http://sabigps.com.br/images/logo.png' /* url */, function() {console.log('share ok')}, function(errormsg){alert(errormsg)})">Envio de mensagem</button>
+    </div>
+    <div data-role="footer" data-position="fixed">
+        <h1>Todos direitos reservados</h1>
+    </div>
+</div>
